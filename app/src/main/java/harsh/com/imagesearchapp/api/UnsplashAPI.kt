@@ -7,7 +7,6 @@ import retrofit2.http.Query
 
 interface UnsplashAPI {
 
-
     //Passing our API KEY inside the header
     @Headers("Accept-Version: v1", "Authorization: Client-ID $CLIENT_ID")
     @GET("search/photos")
