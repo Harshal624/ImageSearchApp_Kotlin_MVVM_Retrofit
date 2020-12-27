@@ -9,5 +9,21 @@
         android:id="@+id/galleryFragment"
         android:name="harsh.com.imagesearchapp.ui.gallery.GalleryFragment"
         android:label="Gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_gallery">
+        <action
+            android:id="@+id/action_galleryFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="harsh.com.imagesearchapp.ui.details.DetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="photo"
+            app:argType="harsh.com.imagesearchapp.data.UnsplashPhoto" />
+    </fragment>
 </navigation>
